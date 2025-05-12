@@ -1,8 +1,10 @@
 <template>
   <div class="app">
-    <Tweet />
+    <!-- Usamos v-for para iterar sobre el array de tweets -->
+    <Tweet v-for="(tweet, index) in tweets" :key="index" :tweet="tweet" />
   </div>
 </template>
+
 
 <script setup>
   import { ref } from 'vue';
